@@ -1,0 +1,10 @@
+{
+  "compilerOptions": { //编译选项
+      "target": "es2016",       //编译目标代码的js标准
+      "module": "commonjs",     //编译目标使用的模块化标准
+      "lib": ["es2016"],        //ts使用的环境
+      "outDir": "./dist"        //输出文件
+    },
+    "include": ["./src"],       //对某个文件夹下进行编译
+    // "files": ["./src"]       某个文件加下的某个文件
+}
