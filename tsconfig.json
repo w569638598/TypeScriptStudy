@@ -3,8 +3,10 @@
       "target": "es2016",       //编译目标代码的js标准
       "module": "commonjs",     //编译目标使用的模块化标准
       "lib": ["es2016"],        //ts使用的环境
-      "outDir": "./dist"        //输出文件
+      "outDir": "./dist",        //输出文件
+      "strictNullChecks": true    //严格的类型检查模式，null和undefined只能赋值给自身，不能赋值给其他类型，比如 let str: string = undefined
     },
     "include": ["./src"],       //对某个文件夹下进行编译
     // "files": ["./src"]       某个文件加下的某个文件
+    
 }
