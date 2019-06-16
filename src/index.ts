@@ -79,3 +79,61 @@ myarr = ["s", 2]
 
  let data: any
  let nu: number = data;         //any类型可以赋值给任何类型
+
+
+ type user = {
+     name: string
+     age: number
+     gender: Gender
+ }
+
+ type Gender = "男" | "女"
+
+ let us: user
+
+ us = {
+     name: "strin",
+     age: 20,
+     gender: "男"
+ }
+
+ function getUsers(g: Gender): user[] {
+    return []
+ }
+/**
+ * 得到a和b相乘的结果
+ * @param a 
+ * @param b 
+ */
+function combine(a: number, b: number): number;
+
+/**
+ * 得到a和b相加的结果
+ * @param a 
+ * @param b 
+ */
+function combine(a: string, b: string): string;
+
+ function combine(a: number | String, b: number | String): number | string{
+    if(typeof a === "number" && typeof b === "number"){
+        return a * b
+    }else if(typeof a === "string" && typeof b == "string"){
+        return a + b
+    }
+    throw new Error("a和b必须是相同的类型")
+}
+
+
+const result = combine("b", "a")
+
+
+function sum(a: number, b: number, c?: number){
+    if(c){
+        return a + b + c;
+    }else{
+        return a + b
+    }
+}
+
+sum(1, 2);
+sum(1, 2, 3)
