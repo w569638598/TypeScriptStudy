@@ -137,3 +137,28 @@ function sum(a: number, b: number, c?: number){
 
 sum(1, 2);
 sum(1, 2, 3)
+
+
+
+// 位运算
+enum Permission{
+    Read = 1,
+    Write = 2,
+    Create = 4,
+    Delete = 8
+}
+
+
+
+//1. 如何组合权限
+//使用或运算
+let p: Permission = Permission.Read | Permission.Write
+
+function hasPermission(target: Permission, per: Permission){
+    return (target & per) === per
+}
+
+p = p | Permission.Delete
+console.log(hasPermission(p, Permission.Delete));
+p = p ^ Permission.Read
+console.log(hasPermission(p, Permission.Read));
