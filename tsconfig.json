@@ -9,7 +9,8 @@
       "noImplicitUseStrict": true,    //编译结果中不包含”use strict“
       "esModuleInterop": true,         //启用es模块儿化交互非es模块儿导出
       "noEmitOnError": true,          //错误时，不生成编译结果
-      "moduleResolution": "node"      //模块儿解析策略， classic和node---classic为经典策略
+      "moduleResolution": "node",      //模块儿解析策略， classic和node---classic为经典策略
+      "strictPropertyInitialization": true   //检查属性是否赋值
     },
     "include": ["./src"],       //对某个文件夹下进行编译
     // "files": ["./src"]       某个文件加下的某个文件
